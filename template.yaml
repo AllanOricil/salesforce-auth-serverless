@@ -1,0 +1,49 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  api
+
+Transform:
+- AWS::Serverless-2016-10-31
+
+Parameters:
+  clientId:
+    Type: String
+    Description: Stores the CLIENT_ID of a Salesforce Connected App
+  clientSecret:
+    Type: String
+    Description: Stores the CLIENT_SECRET of a Salesforce Connected App
+  test:
+    Default: false
+    Type: String
+    AllowedValues: [true, false]
+    Description: 'Is a Test environment?'
+
+Resources:
+  SalesforceAuthFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/salesforce-auth.main
+      Runtime: nodejs12.x
+      MemorySize: 128
+      Timeout: 100
+      Description: Service for Salesforce Connected App Authentication
+      Environment:
+        Variables:
+          CLIENT_ID: !Ref clientId
+          CLIENT_SECRET: !Ref clientSecret
+          TEST: !Ref test
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /auth/salesforce
+            Method: GET
+            RequestParameters:
+              - method.request.querystring.code:
+                  Required: true
+                  Caching: false
+
+Outputs:
+  serverlessApi:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com"
