@@ -1,62 +1,101 @@
 {
-  "body": "{\"message\": \"hello world\"}",
-  "resource": "/{proxy+}",
-  "path": "/path/to/resource",
-  "httpMethod": "POST",
-  "isBase64Encoded": false,
-  "queryStringParameters": {
-    "foo": "bar"
-  },
-  "pathParameters": {
-    "proxy": "/path/to/resource"
-  },
-  "stageVariables": {
-    "baz": "qux"
-  },
+  "resource": "/auth/salesforce",
+  "path": "/auth/salesforce",
+  "httpMethod": "GET",
   "headers": {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Encoding": "gzip, deflate, sdch",
-    "Accept-Language": "en-US,en;q=0.8",
-    "Cache-Control": "max-age=0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "accept-encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9",
     "CloudFront-Forwarded-Proto": "https",
     "CloudFront-Is-Desktop-Viewer": "true",
     "CloudFront-Is-Mobile-Viewer": "false",
     "CloudFront-Is-SmartTV-Viewer": "false",
     "CloudFront-Is-Tablet-Viewer": "false",
-    "CloudFront-Viewer-Country": "US",
-    "Host": "1234567890.execute-api.us-east-1.amazonaws.com",
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Custom User Agent String",
-    "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
-    "X-Amz-Cf-Id": "cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA==",
-    "X-Forwarded-For": "127.0.0.1, 127.0.0.2",
+    "CloudFront-Viewer-Country": "IE",
+    "Host": "d02xrxfkh4.execute-api.eu-west-1.amazonaws.com",
+    "Referer": "https://allanoricil-dev-ed.my.salesforce.com/",
+    "sec-fetch-dest": "document",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "cross-site",
+    "upgrade-insecure-requests": "1",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47",
+    "Via": "2.0 a69a77599a4d18f525519907a15548e3.cloudfront.net (CloudFront)",
+    "X-Amz-Cf-Id": "B_b4FAYSMmD-wrhWl1A6vFKO0VMdMojcjI6wWiT017SQxf9eQ702fg==",
+    "X-Amzn-Trace-Id": "Root=1-5fcba940-28bef5516b8a7b7371746975",
+    "X-Forwarded-For": "109.76.71.125, 64.252.133.36",
     "X-Forwarded-Port": "443",
     "X-Forwarded-Proto": "https"
   },
+  "multiValueHeaders": {
+    "Accept": [
+      "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+    ],
+    "accept-encoding": [ "gzip, deflate, br" ],
+    "Accept-Language": [ "en-US,en;q=0.9" ],
+    "CloudFront-Forwarded-Proto": [ "https" ],
+    "CloudFront-Is-Desktop-Viewer": [ "true" ],
+    "CloudFront-Is-Mobile-Viewer": [ "false" ],
+    "CloudFront-Is-SmartTV-Viewer": [ "false" ],
+    "CloudFront-Is-Tablet-Viewer": [ "false" ],
+    "CloudFront-Viewer-Country": [ "IE" ],
+    "Host": [ "d02xrxfkh4.execute-api.eu-west-1.amazonaws.com" ],
+    "Referer": [ "https://allanoricil-dev-ed.my.salesforce.com/" ],
+    "sec-fetch-dest": [ "document" ],
+    "sec-fetch-mode": [ "navigate" ],
+    "sec-fetch-site": [ "cross-site" ],
+    "upgrade-insecure-requests": [ "1" ],
+    "User-Agent": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47"
+    ],
+    "Via": [
+      "2.0 a69a77599a4d18f525519907a15548e3.cloudfront.net (CloudFront)"
+    ],
+    "X-Amz-Cf-Id": [ "B_b4FAYSMmD-wrhWl1A6vFKO0VMdMojcjI6wWiT017SQxf9eQ702fg==" ],
+    "X-Amzn-Trace-Id": [ "Root=1-5fcba940-28bef5516b8a7b7371746975" ],
+    "X-Forwarded-For": [ "109.76.71.125, 64.252.133.36" ],
+    "X-Forwarded-Port": [ "443" ],
+    "X-Forwarded-Proto": [ "https" ]
+  },
+  "queryStringParameters": {
+    "code": "aPrxwwNuBlmuqjn8GqRO38Iw_OUGB4LNtYwZ7h9OHwyXcUvmLyBfAo_aD6rXfFdjoOAvxYNnkA=="
+  },
+  "multiValueQueryStringParameters": {
+    "code": [
+      "aPrxwwNuBlmuqjn8GqRO38Iw_OUGB4LNtYwZ7h9OHwyXcUvmLyBfAo_aD6rXfFdjoOAvxYNnkA=="
+    ]
+  },
+  "pathParameters": null,
+  "stageVariables": null,
   "requestContext": {
-    "accountId": "123456789012",
-    "resourceId": "123456",
-    "stage": "prod",
-    "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
-    "requestTime": "09/Apr/2015:12:34:56 +0000",
-    "requestTimeEpoch": 1428582896000,
+    "resourceId": "6oi5o3",
+    "resourcePath": "/auth/salesforce",
+    "httpMethod": "GET",
+    "extendedRequestId": "XFdiCHufDoEFtEg=",
+    "requestTime": "05/Dec/2020:15:37:36 +0000",
+    "path": "/Prod/auth/salesforce",
+    "accountId": "467051206835",
+    "protocol": "HTTP/1.1",
+    "stage": "Prod",
+    "domainPrefix": "d02xrxfkh4",
+    "requestTimeEpoch": 1607182656147,
+    "requestId": "07a095bb-aae8-4753-aefc-1d4ae76dc546",
     "identity": {
       "cognitoIdentityPoolId": null,
       "accountId": null,
       "cognitoIdentityId": null,
       "caller": null,
+      "sourceIp": "109.76.71.125",
+      "principalOrgId": null,
       "accessKey": null,
-      "sourceIp": "127.0.0.1",
       "cognitoAuthenticationType": null,
       "cognitoAuthenticationProvider": null,
       "userArn": null,
-      "userAgent": "Custom User Agent String",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36 Edg/87.0.664.47",
       "user": null
     },
-    "path": "/prod/path/to/resource",
-    "resourcePath": "/{proxy+}",
-    "httpMethod": "POST",
-    "apiId": "1234567890",
-    "protocol": "HTTP/1.1"
-  }
+    "domainName": "d02xrxfkh4.execute-api.eu-west-1.amazonaws.com",
+    "apiId": "d02xrxfkh4"
+  },
+  "body": null,
+  "isBase64Encoded": false
 }

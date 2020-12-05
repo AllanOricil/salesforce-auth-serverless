@@ -1,4 +1,4 @@
-# Salesforce Auth Service
+# Salesforce Serverless Auth Service
 
 ## Deploy the sample application
 
@@ -39,13 +39,17 @@ The SAM CLI can also emulate your application's API. Use the `sam local start-ap
 
 ```bash
 sam local start-api
-curl http://localhost:3000/
 ```
+
+Also, don't forget to add `https://localhost:3000/auth/salesforce` to the list of Callback urls in your Connected App, like shown below:
+
+![callback_urls](./images/callback_urls.PNG)
+
 
 ## Cleanup
 
 To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
 
 ```bash
-aws cloudformation delete-stack --stack-name github
+aws cloudformation delete-stack --stack-name STACK_NAME
 ```
